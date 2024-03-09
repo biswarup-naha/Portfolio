@@ -1,0 +1,27 @@
+.navbar{
+    height: 100px;
+
+    .wrapper{
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // background-color: aliceblue;
+        height: 100%;
+    }
+
+    img{
+        height: 18px;
+        width: 18px;
+    }
+
+    span{
+        font-weight: bold;
+    }
+
+    .social{
+        display: flex;
+        gap: 20px;
+    }
+}
