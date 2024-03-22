@@ -3,6 +3,16 @@ html{
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar{
+  width: 0;
+}
+::-webkit-scrollbar-track{
+  // background: hsl(120, 50%, 75%);
+}
+::-webkit-scrollbar-thumb{
+  // background: red;
+}
+
 *{
   margin: 0;
   padding: 0;
