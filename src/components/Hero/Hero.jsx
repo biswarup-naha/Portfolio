@@ -32,37 +32,87 @@ const sliderVariants={
     },
 };
 
+const CV_url='http://localhost:5173/Resume.pdf'
+const blog_url = "https://biswa-dev.hashnode.dev/";
+
 function Hero() {
+
+  const blogLink=(url)=>{
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.target="_blank";
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  }
+
+    const downloadCv=(url)=>{
+        const fileName=url.split('/').pop()
+        const aTag=document.createElement('a')
+        aTag.href = url;
+        aTag.setAttribute('download',fileName)
+        document.body.appendChild(aTag)
+        aTag.click()
+        aTag.remove()
+    }
+
   return (
     <div className="hero">
-        <div className="wrapper">
-            <motion.div className="txtContainer" variants={txtVariants} initial="initial" animate="animate">
-                <motion.h2 variants={txtVariants}>Biswarup Naha</motion.h2>
-                <motion.h1 variants={txtVariants}>Web developer</motion.h1>
-                <motion.div className="buttons">
-                    <motion.button variants={txtVariants} >See my latest works</motion.button>
-                    <motion.button variants={txtVariants} >Contact me</motion.button>
-                </motion.div>
-                
-                <motion.div
-                    initial={{opacity: 1, y: 0}}
-                    animate={{opacity: 0, y: 100}}
-                    transition={{duration: 2, ease: "easeInOut", repeat: Infinity}}
-                    variants={txtVariants}
-                >
-                    <BsFileArrowDown className="scroll-down" size={40} />
-                </motion.div>
-                
-            </motion.div>
-        </div>
-        <motion.div className="slidingTxt" variants={sliderVariants} initial="initial" animate= "animate" >
-            Web Developer
+      <div className="wrapper">
+        <motion.div
+          className="txtContainer"
+          variants={txtVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.h2 variants={txtVariants}>Biswarup Naha</motion.h2>
+          <motion.h1
+            variants={txtVariants}
+            whileHover={{
+              background: "pink",
+              color: "#9E3469",
+              textShadow: "0 0 20px pink, 0 0 10px pink, 0 0 5px pink",
+            }}
+          >
+            Web developer
+          </motion.h1>
+          <motion.div className="buttons">
+            <motion.button variants={txtVariants} onClick={()=>blogLink(blog_url)}>
+              See my latest blog
+            </motion.button>
+            <motion.button
+              variants={txtVariants}
+              onClick={() => {
+                downloadCv(CV_url);
+              }}
+            >
+              Download Resume
+            </motion.button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 0, y: 100 }}
+            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
+            variants={txtVariants}
+          >
+            <BsFileArrowDown className="scroll-down" size={40} />
+          </motion.div>
         </motion.div>
-        <div className="imgContainer">
-            <img src={myImage} alt="" />
-        </div>
+      </div>
+      <motion.div
+        className="slidingTxt"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        Web Developer
+      </motion.div>
+      <div className="imgContainer">
+        <img src={myImage} alt="" />
+      </div>
     </div>
-  )
+  );
 }
 
 export default Hero

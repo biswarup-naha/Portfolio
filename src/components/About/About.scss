@@ -1,0 +1,61 @@
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    margin: 50px auto;
+    max-width: 640px; // Wider component
+    height: 85%; // Larger height to fit more content
+    overflow-y: auto; // Allows scrolling for additional content
+    border-radius: 10px; // Rounded corners
+    box-shadow: 0 2px 5px rgba(226, 113, 101, 0.799); // Soft shadow for depth
+
+    // background: #f5f5f5; // Light background
+
+    .header {
+        margin-bottom: 1rem;
+
+        h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ece7e7;
+            margin: 0;
+        }
+    }
+
+    .bio,
+    .skills,
+    .hobbies {
+        margin-bottom: 1.5rem; // Spacing between sections
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #b0a8a8;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 1rem; // Spacing between skills or hobbies
+
+                &:last-child {
+                    margin-right: 0; // No extra margin at the end
+                }
+            }
+        }
+    }
+
+    .skills h3,
+    .hobbies h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #f89;
+        margin-bottom: 0.5rem; // Space between header and content
+    }
+}

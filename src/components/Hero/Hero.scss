@@ -1,9 +1,11 @@
+@import "../../app.scss";
+
 .hero{
     height: calc(100vh - 100px);
     background: linear-gradient(180deg,#0c0c1d,#111);
     overflow: hidden;
     position: relative;
-    z-index: -1;
+    // z-index: -1;
 
     .wrapper{
         max-width: 1366px;
@@ -16,8 +18,16 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            // align-items: center;
             gap: 40px;
+
+        @include mobile {
+                height: 50%;
+                width: 100%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+            }
             
             h2{
                 font-size: 30px;
@@ -44,12 +54,13 @@
                     color: white;
                     cursor: pointer;
                     font-weight: 300;
+                    z-index: 300;
                 }
-                // buttons:hover{
-                //     color:#a33358;
-                //     border-color: #a33358;
-                //     size: 2em;
-                // }
+                buttons:hover{
+                    color:#a33358;
+                    border-color: #a33358;
+                    size: 2em;
+                }
             }
 
         .scroll-down{
@@ -69,8 +80,17 @@
         top: 0;
         right: 0;
 
+        @include mobile {
+                height: 50%;
+                width: 100%;
+                top: unset;
+                bottom: 0;
+            }
+
         img{
             height: 100%;
+            width: 100%;
+            object-fit: cover;
             filter: drop-shadow(inset 0px 0px 85px rgba(0, 0, 0, 0.8));
         }
     }
