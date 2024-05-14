@@ -33,7 +33,7 @@ const sliderVariants={
 };
 
 const CV_url =
-  "https://662e9ec9cd933b06870a3d4a--gleeful-licorice-37437f.netlify.app//Resume.pdf";
+  "https://drive.google.com/file/d/1jXXE14ZGfLmsqDNA0_DyQibHVijr3ABo/view?usp=sharing";
 const blog_url = "https://biswa-dev.hashnode.dev/";
 
 function Hero() {

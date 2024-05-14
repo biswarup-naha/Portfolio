@@ -19,6 +19,7 @@ const items = [
     title: "Movieflix",
     img: mf,
     desc: "Movieflix is an online database that contains information and statistics about movies. It allows users to explore movies, view their details, and perform various operations such as sorting and filtering. This project is built using the MERN stack (MongoDB, Express.js, React, and Node.js).",
+    link: "https://movie-flix-ochre.vercel.app/",
   },
   {
     id: 3,
