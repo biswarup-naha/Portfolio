@@ -32,7 +32,8 @@ const sliderVariants={
     },
 };
 
-const CV_url='http://localhost:5173/Resume.pdf'
+const CV_url =
+  "https://662e9ec9cd933b06870a3d4a--gleeful-licorice-37437f.netlify.app//Resume.pdf";
 const blog_url = "https://biswa-dev.hashnode.dev/";
 
 function Hero() {
@@ -78,7 +79,7 @@ function Hero() {
           </motion.h1>
           <motion.div className="buttons">
             <motion.button variants={txtVariants} onClick={()=>blogLink(blog_url)}>
-              See my latest blog
+              See latest blog
             </motion.button>
             <motion.button
               variants={txtVariants}

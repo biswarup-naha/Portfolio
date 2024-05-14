@@ -22,9 +22,9 @@
             gap: 40px;
 
         @include mobile {
-                height: 50%;
+                height: 55%;
                 width: 100%;
-                gap: 20px;
+                gap: 6px;
                 align-items: center;
                 text-align: center;
             }
@@ -34,10 +34,17 @@
                 // color: rebeccapurple;
                 color: #a33358;
                 letter-spacing: 8px;
+
+                @include mobile {
+                        letter-spacing: 6px;
+                    }
             }
 
             h1{
                 font-size: 80px;
+                @include mobile{
+                    font-size: 4rem;
+                }
             }
 
             .buttons{

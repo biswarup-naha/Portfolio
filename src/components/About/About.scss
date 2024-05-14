@@ -1,17 +1,23 @@
+@import "../../app.scss";
+
 .about-me {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 2rem;
-    margin: 50px auto;
+    margin: 100px auto;
     max-width: 640px; // Wider component
-    height: 85%; // Larger height to fit more content
+    height: 70%; // Larger height to fit more content
     overflow-y: auto; // Allows scrolling for additional content
     border-radius: 10px; // Rounded corners
-    box-shadow: 0 2px 5px rgba(226, 113, 101, 0.799); // Soft shadow for depth
+    box-shadow: 0 2px 5px rgba(101, 226, 138, 0.799); // Soft shadow for depth
+    background-color: #010516;
 
-    // background: #f5f5f5; // Light background
+    @include mobile{
+        margin: 90px auto;
+        width: 90%;
+    }
 
     .header {
         margin-bottom: 1rem;

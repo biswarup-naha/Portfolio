@@ -7,7 +7,7 @@ import Services from './components/Services/Services'
 import About from './components/About/About'
 import Portfoilo from './components/portfolio/Portfoilo'
 import Contact from './components/contact/Contact'
-import Cursor from './components/cursor/Cursor'
+// import Cursor from './components/cursor/Cursor'
 
 function App() {
   return (

@@ -1,6 +1,17 @@
 import "./services.scss";
 import { color, motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { TfiHtml5 } from "react-icons/tfi";
+import { FaCss3Alt } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { PiFigmaLogoDuotone } from "react-icons/pi";
+import { SiCanva } from "react-icons/si";
 
 
 const variants={
@@ -32,7 +43,7 @@ const Services = () => {
       variants={variants}
       initial="initial"
       ref={ref}
-      animate={isInView && "animate"}
+      animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
@@ -62,10 +73,11 @@ const Services = () => {
         >
           <h2>Frontend</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            saepe totam distinctio quo qui voluptatum placeat ipsa nostrum! Non
-            sit molestias dicta ipsum error. Quo, dignissimos velit. Sequi, sit!
-            Dicta.
+            <TfiHtml5 className="htm"/>
+            <FaCss3Alt className="css"/>
+            <SiJavascript className="js" />
+            <FaReact className="react" />
+            <SiTailwindcss className="tailwind" />
           </p>
         </motion.div>
         <motion.div
@@ -78,10 +90,10 @@ const Services = () => {
         >
           <h2>Backend</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            saepe totam distinctio quo qui voluptatum placeat ipsa nostrum! Non
-            sit molestias dicta ipsum error. Quo, dignissimos velit. Sequi, sit!
-            Dicta.
+            <FaNodeJs className="njs" />
+            <SiExpress className="ex" />
+            <SiMongodb className="mongo" />
+            <SiMysql className="msq" />
           </p>
         </motion.div>
         <motion.div
@@ -94,10 +106,8 @@ const Services = () => {
         >
           <h2>UI/UX design</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            saepe totam distinctio quo qui voluptatum placeat ipsa nostrum! Non
-            sit molestias dicta ipsum error. Quo, dignissimos velit. Sequi, sit!
-            Dicta.
+            <PiFigmaLogoDuotone className="fig" />
+            <SiCanva className="can" />
           </p>
         </motion.div>
       </motion.div>

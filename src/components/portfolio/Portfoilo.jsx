@@ -1,31 +1,38 @@
 import { useRef } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import todo from "../../../public/todo.png";
+import mf from "../../../public/movieflix.png";
+import tk from "../../../public/tk.png";
+import knmp from "../../../public/knmp.png"
 
 const items = [
   {
     id: 1,
     title: "MERN todo app",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    img: todo,
+    desc: "This is a simple todo application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack which demonstrates CRUD operations. The user can create, edit and remove todos at their will.",
+    link: "https://t0d0-app789.netlify.app/",
   },
   {
     id: 2,
-    title: "SIH 2023",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Movieflix",
+    img: mf,
+    desc: "Movieflix is an online database that contains information and statistics about movies. It allows users to explore movies, view their details, and perform various operations such as sorting and filtering. This project is built using the MERN stack (MongoDB, Express.js, React, and Node.js).",
   },
   {
     id: 3,
-    title: "vanilla JS Tic-Tac-Toe",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "SIH 2023",
+    img: knmp,
+    desc: "A website backed by a centralised database for all the Nasha Mukti Kendra's in India. It provides real-time analytics and serves the purpose of MoSJE.",
+    link: "https://github.com/The15thSin/nmdb-sih",
   },
   {
     id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "vanilla-JS Tic-Tac-Toe",
+    img: tk,
+    desc: "This is a simple Tic Tac Toe game implemented in HTML, CSS, and JavaScript. The game allows two players to take turns marking the spaces in a 3x3 grid to achieve a row, column, or diagonal of their symbol ('X' or 'O'). The scores are saved in local storage.",
+    link: "https://main--coruscating-queijadas-3d794b.netlify.app/",
   },
 ];
 
@@ -48,7 +55,9 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <button>
+              <a href={item.link} target="blank">See Demo</a>
+            </button>
           </motion.div>
         </div>
       </div>

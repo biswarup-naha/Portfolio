@@ -1,108 +1,183 @@
 @import "../../app.scss";
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-.services{
-    background: linear-gradient(180deg, #0c0c1d, #111132);
-    height: 100%;
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      position: relative;
+      top: 5px;
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+  .titleContainer {
+    flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 
-    .textContainer{
-        flex: 1;
-        align-self: flex-end;
-        display: flex;
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin-top: 35px;
+      }
+      }
+
+      h1 {
+        font-size: 100px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      bottom: 25px;
+      gap: 50px;
+    }
+
+    .box {
+      padding: 50px;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include mobile {
+        border: none;
         align-items: center;
         gap: 20px;
+        padding: 10px;
+      }
+
+      p {
+        .htm{
+          font-size: 45px;
+          color: rgb(255, 111, 0);
+        }
+        .css{
+          font-size: 45px;
+          color: rgb(90, 207, 243);
+        }
+        .js{
+          font-size: 40px;
+          color: yellow;
+        }
+        .react{
+          font-size: 40px;
+          color: rgb(9, 167, 214);
+        }
+        .tailwind{
+          font-size: 40px;
+          color: rgb(102, 210, 243);
+        }
+        .njs{
+          font-size: 40px;
+          color: rgb(103, 218, 50);
+        }
+        .ex{
+          font-size: 40px;
+          color: rgb(16, 200, 28);
+        }
+        .mongo{
+          font-size: 40px;
+          color: rgb(128, 243, 75);
+        }
+        .msq{
+          font-size: 50px;
+          color: rgb(95, 148, 227);
+        }
+        .fig{
+          font-size: 50px;
+          color: rgb(227, 95, 135);
+        }
+        .can{
+          font-size: 50px;
+          color: rgb(175, 97, 234);
+        }
+        
+      }
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
 
         @include mobile {
-                align-self: center;
-                text-align: center;
-                flex-direction: column;
-            }
-
-        p{
-            font-weight: 200;
-            font-size: 20px;
-            text-align: right;
-            color: gray;
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
         }
-
-        hr{
-            width: 500px;
-            border: none;
-            border-top: 0.5px solid gray;
-            @include mobile {
-                    width: 300px;
-                }
-        }
+      }
     }
-    .titleContainer{
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  }
 
-        @include mobile {
-                width: 100%;
-            }
-
-        .title{
-            display: flex;
-            align-items: center;
-            gap: 50px;
-
-            @include mobile {
-                    flex-direction: column;
-                    text-align: center;
-                    gap: 20px;
-                }
-
-            img{
-                width: 300px;
-                height: 100px;
-                border-radius: 50px;
-                object-fit: cover;
-            }
-
-            h1{
-                font-size: 40px;
-                font-weight: lighter;
-
-                @include mobile {
-                        font-size: 36px;
-                    }
-            }
-            b{
-                font-size: 90px;
-                font-weight: 900;
-            }
-        }
-    }
-    .listContainer{
-        flex: 2;
-        display: flex;
-        max-width: 1366px;
-        margin: auto;
-
-        @include mobile {
-                flex-direction: column;
-                width: 100%;
-            }
-
-        .box{
-            padding: 50px;
-            border: 0.5px solid gray;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            @include mobile {
-                    border: none;
-                    align-items: center;
-                    gap: 20px;
-                    padding: 10px;
-                }
-        }
-    }
-
-}
