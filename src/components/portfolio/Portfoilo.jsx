@@ -4,7 +4,8 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import todo from "../../../public/todo.png";
 import mf from "../../../public/movieflix.png";
 import tk from "../../../public/tk.png";
-import knmp from "../../../public/knmp.png"
+import knmp from "../../../public/knmp.png";
+import ehms from "../../../public/ehms.png";
 
 const items = [
   {
@@ -16,20 +17,27 @@ const items = [
   },
   {
     id: 2,
+    title: "Aarogya: e-HMS",
+    img: ehms,
+    desc: "A cutting-edge platform designed to revolutionize healthcare delivery and management. Built with the powerful MERN stack and AI/ML integration, our system ensures a seamless and efficient experience for both healthcare providers and patients.",
+    link: "https://e-healthcare-management-system.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Movieflix",
     img: mf,
     desc: "Movieflix is an online database that contains information and statistics about movies. It allows users to explore movies, view their details, and perform various operations such as sorting and filtering. This project is built using the MERN stack (MongoDB, Express.js, React, and Node.js).",
     link: "https://movie-flix-ochre.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "SIH 2023",
     img: knmp,
     desc: "A website backed by a centralised database for all the Nasha Mukti Kendra's in India. It provides real-time analytics and serves the purpose of MoSJE.",
     link: "https://github.com/The15thSin/nmdb-sih",
   },
   {
-    id: 4,
+    id: 5,
     title: "vanilla-JS Tic-Tac-Toe",
     img: tk,
     desc: "This is a simple Tic Tac Toe game implemented in HTML, CSS, and JavaScript. The game allows two players to take turns marking the spaces in a 3x3 grid to achieve a row, column, or diagonal of their symbol ('X' or 'O'). The scores are saved in local storage.",
