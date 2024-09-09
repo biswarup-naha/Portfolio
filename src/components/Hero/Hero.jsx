@@ -33,7 +33,7 @@ const sliderVariants={
 };
 
 const CV_url =
-  "https://drive.google.com/file/d/1bqXu_fXoliMDLmxqsQb9D_IAlJHy5dfN/view?usp=sharing";
+  "https://drive.google.com/file/d/1FsluHkyPWzodViZ6csWaNwh2FSbRlUmp/view?usp=sharing";
 const blog_url = "https://biswa-dev.hashnode.dev/";
 
 function Hero() {
